@@ -1,0 +1,122 @@
+.sectionTitle {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 56px;
+    letter-spacing: -0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    i {
+        font-size: 1.8rem;
+        color: #6c63ff;
+    }
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 34px;
+
+    .projectCard {
+        background: rgba(12, 12, 22, 0.7);
+        border-radius: 32px;
+        border: 1px solid rgba(80, 80, 120, 0.4);
+        overflow: hidden;
+        transition: all 0.35s ease;
+        transform-style: preserve-3d;
+        will-change: transform;
+
+        .imgPlaceholder {
+            background: linear-gradient(135deg, #14141f, #0a0a12);
+            height: 190px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8e8eb5;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border-bottom: 1px solid #26263a;
+            gap: 8px;
+
+            i {
+                font-size: 2rem;
+                opacity: 0.6;
+            }
+        }
+
+        .projectContent {
+            padding: 24px;
+
+            .projectTitle {
+                font-size: 1.55rem;
+                font-weight: 700;
+                margin-bottom: 12px;
+                letter-spacing: -0.2px;
+            }
+
+            .featureList {
+                list-style: none;
+                margin: 20px 0 18px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 0.85rem;
+                    color: #cfcfed;
+
+                    i {
+                        color: #6c63ff;
+                        width: 18px;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+
+            .projectTech {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 16px;
+                border-top: 1px dashed #2c2c48;
+                padding-top: 18px;
+
+                span {
+                    background: #0f0f1c;
+                    border-radius: 30px;
+                    padding: 4px 12px;
+                    font-size: 0.7rem;
+                    font-weight: 500;
+                    font-family: monospace;
+                    color: #b9b9ff;
+                }
+            }
+        }
+    }
+}
+
+// адаптивность
+@media (max-width: 720px) {
+    .projectsGrid {
+        gap: 24px;
+        grid-template-columns: 1fr;
+
+        .projectCard .projectContent {
+            padding: 20px;
+
+            .projectTitle {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+}

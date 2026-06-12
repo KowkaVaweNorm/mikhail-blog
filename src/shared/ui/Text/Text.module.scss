@@ -1,0 +1,73 @@
+.body_small {
+    font: var(--font-body-small);
+}
+
+.body_medium {
+    font: var(--font-body-medium);
+}
+
+.body_large {
+    font: var(--font-body-large);
+}
+
+.body_xlarge {
+    font: var(--font-body-xlarge);
+}
+
+.button_medium {
+    font: var(--font-button-medium);
+}
+
+.button_large {
+    font: var(--font-button-large);
+}
+
+.button_xlarge {
+    font: var(--font-button-xlarge);
+}
+
+.heading_small {
+    font: var(--font-heading-small);
+    letter-spacing: var(--font-heading-small-letter-spacing);
+}
+
+.heading_medium {
+    font: var(--font-heading-medium);
+    letter-spacing: var(--font-heading-medium-letter-spacing);
+}
+
+.heading_large {
+    font: var(--font-heading-large);
+    letter-spacing: var(--font-heading-large-letter-spacing);
+}
+
+.heading_xlarge {
+    font: var(--font-heading-xlarge);
+    letter-spacing: var(--font-heading-xlarge-letter-spacing);
+}
+
+.heading_xxlarge {
+    font: var(--font-heading-xxlarge);
+    letter-spacing: var(--font-heading-xxlarge-letter-spacing);
+}
+
+.heading_xxxlarge {
+    font: var(--font-heading-xxxlarge);
+    letter-spacing: var(--font-heading-xxxlarge-letter-spacing);
+}
+
+.heading_xxxxlarge {
+    font: var(--font-heading-xxxxlarge);
+    letter-spacing: var(--font-heading-xxxxlarge-letter-spacing);
+}
+.heading_5xlarge {
+    font: var(--font-heading-5xlarge);
+    letter-spacing: var(--font-heading-5xlarge-letter-spacing);
+}
+
+.ellipsis {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

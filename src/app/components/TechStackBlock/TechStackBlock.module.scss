@@ -1,0 +1,83 @@
+.sectionTitle {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 56px;
+    letter-spacing: -0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    i {
+        font-size: 1.8rem;
+        color: #6c63ff;
+    }
+}
+
+.techColumns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    justify-content: space-between;
+
+    .techHeading {
+        font-weight: 600;
+        margin-bottom: 16px;
+        margin-top: 28px;
+        color: #e0e0ff;
+        font-size: 1.1rem;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    .techShowcase {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: flex-start;
+        margin-top: 12px;
+
+        .skillPill {
+            background: rgba(20, 20, 35, 0.7);
+            padding: 6px 18px;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: 0.2s;
+            border: 0.5px solid #35355a;
+            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: -0.2px;
+
+            &:hover {
+                background: #1e1e32;
+                transform: scale(1.02);
+                border-color: #6c63ff;
+                color: white;
+            }
+        }
+    }
+}
+
+// адаптивность
+@media (max-width: 720px) {
+    .techColumns {
+        gap: 32px;
+        flex-direction: column;
+
+        .techShowcase .skillPill {
+            padding: 5px 14px;
+            font-size: 0.75rem;
+        }
+
+        .techHeading {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+}

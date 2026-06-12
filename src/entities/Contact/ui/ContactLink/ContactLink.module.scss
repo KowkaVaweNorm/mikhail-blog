@@ -1,0 +1,96 @@
+.contactRow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    background: rgba(20, 30, 45, 0.3);
+    border-radius: 80px;
+    padding: 6px 6px 6px 10px;
+    transition:
+        background 0.25s,
+        border-color 0.25s;
+    border: 1px solid rgba(74, 111, 165, 0.2);
+
+    &:hover {
+        border-color: rgba(74, 111, 165, 0.6);
+        background: rgba(74, 111, 165, 0.1);
+    }
+
+    .iconLink {
+        background: rgba(74, 111, 165, 0.2);
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 60px;
+        transition: 0.2s;
+        color: #c0d4ff;
+        font-size: 1.3rem;
+        text-decoration: none;
+        flex-shrink: 0;
+
+        &:hover {
+            background: #4a6fa5;
+            color: white;
+            transform: scale(1.02);
+            box-shadow: 0 0 12px rgba(74, 111, 165, 0.5);
+        }
+    }
+
+    .copyTextBlock {
+        font-family: 'Inter', monospace;
+        font-size: 0.95rem;
+        font-weight: 400;
+        color: #e2e8f0;
+        letter-spacing: 0.2px;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 8px 16px;
+        border-radius: 60px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        
+        border: 0.5px solid rgba(255, 255, 240, 0.1);
+        flex: 1;
+        justify-content: space-between;
+
+        .copyText {
+            word-break: break-all;
+            cursor: text;
+            user-select: text;
+
+            &::selection {
+                background: #4a6fa5;
+                color: #ffffff;
+            }
+
+            &::-moz-selection {
+                background: #4a6fa5;
+                color: #ffffff;
+            }
+        }
+
+        .copyButton {
+            background: none;
+            border: none;
+            font-size: 0.8rem;
+            color: #8ba9d4;
+            opacity: 0.6;
+            transition: 0.2s;
+            cursor: pointer;
+            user-select: none;
+            flex-shrink: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                opacity: 1;
+                color: #ffffff;
+                transform: scale(1.08);
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.contactStrip {
+    background: rgba(10, 10, 20, 0.5);
+    border-radius: 64px;
+    padding: 52px 40px;
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    box-shadow: 0 20px 35px -15px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+    max-width: 700px;
+    margin: 0 auto;
+
+    &:hover {
+        border-color: #6c63ff;
+        box-shadow: 0 0 28px rgba(108, 99, 255, 0.2);
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 48px;
+
+        .headerIcon {
+            font-size: 2.5rem;
+            color: #6c63ff;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .contactTitle {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+
+            @media (max-width: 600px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .contactDesc {
+            color: #b9b9ee;
+            max-width: 450px;
+            margin: 0 auto;
+            font-size: 0.95rem;
+            line-height: 1.5;
+
+            @media (max-width: 600px) {
+                font-size: 0.85rem;
+                padding: 0 12px;
+            }
+        }
+    }
+
+    .verticalLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 32px;
+    }
+
+    .btnOutline {
+        background: #0f0f1e;
+        border: 1px solid #6c63ff;
+        color: #cbcbf5;
+        padding: 12px 28px;
+        border-radius: 60px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: fit-content;
+        margin: 0 auto;
+        font-family: inherit;
+
+        &:hover {
+            background: #6c63ff;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(108, 99, 255, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            padding: 10px 20px;
+            font-size: 0.8rem;
+            width: 100%;
+        }
+    }
+}
+
+// Адаптация для мобильных устройств
+@media (max-width: 768px) {
+    .contactStrip {
+        padding: 36px 24px;
+        border-radius: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactStrip {
+        padding: 28px 10px;
+        border-radius: 36px;
+    }
+
+    .verticalLinks {
+        gap: 16px;
+    }
+}
