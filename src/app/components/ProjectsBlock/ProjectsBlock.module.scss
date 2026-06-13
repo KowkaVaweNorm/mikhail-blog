@@ -1,0 +1,31 @@
+.sectionTitle {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 56px;
+    letter-spacing: -0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    i {
+        font-size: 1.8rem;
+        color: #6c63ff;
+    }
+}
+
+.projectsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+@media (max-width: 900px) {
+    .sectionTitle {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    .projectsGrid {
+        gap: 32px;
+    }
+}

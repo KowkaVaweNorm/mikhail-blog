@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
-
+import cls from './layout.module.scss';
+import { Header } from './components/Header/Header';
+import { HashScroll } from './components/HashScroll/HashScroll';
 const inter = Inter({
     subsets: ['latin', 'cyrillic'],
     variable: '--font-inter',
@@ -102,7 +104,18 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ru" className={`${inter.variable} ${jetbrains.variable}`} suppressHydrationWarning>
-            <body>{children}</body>
+            <body>
+                <div className={cls.layout}>
+                    <Header />
+                    <HashScroll />
+                    <div className={cls.blobBg}>
+                        <div className={`${cls.blob} ${cls.blob1}`}></div>
+                        <div className={`${cls.blob} ${cls.blob2}`}></div>
+                        <div className={`${cls.blob} ${cls.blob3}`}></div>
+                    </div>
+                    <main className={cls.page}>{children}</main>
+                </div>
+            </body>
         </html>
     );
 }

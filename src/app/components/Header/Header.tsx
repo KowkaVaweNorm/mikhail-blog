@@ -39,37 +39,39 @@ export const Header = () => {
 
     return (
         <header className={cls.header}>
-            <div className={cls.navbar}>
-                <div className={cls.logo}>
-                    <Link href="/" onClick={closeMenu}>
-                        Михаил · N
-                    </Link>
-                </div>
+            <div className={cls.content}>
+                <div className={cls.navbar}>
+                    <div className={cls.logo}>
+                        <Link href="/" onClick={closeMenu}>
+                            Михаил · N
+                        </Link>
+                    </div>
 
-                {isMobile && (
-                    <button
-                        className={`${cls.burger} ${isMenuOpen ? cls.burgerOpen : ''}`}
-                        onClick={toggleMenu}
-                        aria-label="Меню"
-                    >
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                )}
+                    {isMobile && (
+                        <button
+                            className={`${cls.burger} ${isMenuOpen ? cls.burgerOpen : ''}`}
+                            onClick={toggleMenu}
+                            aria-label="Меню"
+                        >
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    )}
 
-                <div className={`${cls.navLinks} ${isMobile && !isMenuOpen ? cls.hidden : ''}`}>
-                    <Link href="/portfolio" className={isActive('/') ? cls.active : ''} onClick={closeMenu}>
-                        Портфолио
-                    </Link>
+                    <div className={`${cls.navLinks} ${isMobile && !isMenuOpen ? cls.hidden : ''}`}>
+                        <Link href="/" className={isActive('/') ? cls.active : ''} onClick={closeMenu}>
+                            Портфолио
+                        </Link>
 
-                    <Link
-                        href="/#contacts_block"
-                        className={isActive('/') && pathname.includes('contacts') ? cls.active : ''}
-                        onClick={closeMenu}
-                    >
-                        Контакты
-                    </Link>
+                        <Link
+                            href="/#contacts_block"
+                            className={isActive('/') && pathname.includes('contacts') ? cls.active : ''}
+                            onClick={closeMenu}
+                        >
+                            Контакты
+                        </Link>
+                    </div>
                 </div>
             </div>
         </header>
