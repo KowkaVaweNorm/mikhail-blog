@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
         optimizeCss: true,
     },
     output: 'export',
+    basePath: '/mikhail-blog',
     allowedDevOrigins: ['192.168.3.7'],
     assetPrefix: process.env.NODE_ENV === 'development' ? '' : undefined,
     rewrites() {
