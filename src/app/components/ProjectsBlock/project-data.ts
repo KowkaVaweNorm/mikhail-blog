@@ -1,5 +1,7 @@
 import { ProjectCardProps } from './ProjectCard/ProjectCard';
+import config from '~/next.config';
 
+const basePath = config.basePath;
 export const PROJECTS_DATA: ProjectCardProps[] = [
     {
         title: 'Concero',
@@ -13,7 +15,7 @@ export const PROJECTS_DATA: ProjectCardProps[] = [
         ],
         techStack: ['React', 'NestJS', 'PostgreSQL', 'Redis', 'NATS', 'viem', 'wagmi', 'TypeORM'],
         projectUrl: 'https://concero.io',
-        images: ['/assets/portfolio/concero-quests.png', '/assets/portfolio/concero-quest.png'],
+        images: [`${basePath}/assets/portfolio/concero-quests.png`, `${basePath}/assets/portfolio/concero-quest.png`],
         imageAlt: 'Concero проект скриншот',
     },
     {
@@ -25,7 +27,7 @@ export const PROJECTS_DATA: ProjectCardProps[] = [
             'Разработал модуль динамического редактирования таблиц с переменным количеством колонок и строк',
             'Реализовал интерактивные дашборды визуализации данных и автоматическую генерацию Excel-отчетов',
         ],
-        images: ['/assets/portfolio/npz-ui.jpg', '/assets/portfolio/npz-ui2.jpg'],
+        images: [`${basePath}/assets/portfolio/npz-ui.jpg`, `${basePath}/assets/portfolio/npz-ui2.jpg`],
         imageAlt: 'Нефтезавод скриншот',
         techStack: ['React', 'Ant Design', 'Redux Toolkit', 'RTK Query', 'FSD', 'Docker', 'Zod'],
     },

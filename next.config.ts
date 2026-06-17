@@ -1,15 +1,15 @@
 import type { NextConfig } from 'next';
-import createMDX from '@next/mdx';
-
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = !isDev;
 const nextConfig: NextConfig = {
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     experimental: {
         optimizeCss: true,
     },
     output: 'export',
-    basePath: '/mikhail-blog',
+    basePath: isProd ? '/mikhail-blog' : '',
     allowedDevOrigins: ['192.168.3.7'],
-    assetPrefix: process.env.NODE_ENV === 'development' ? '' : undefined,
+    assetPrefix: isDev ? '' : undefined,
     rewrites() {
         return [
             {
@@ -19,8 +19,4 @@ const nextConfig: NextConfig = {
         ];
     },
 };
-const withMDX = createMDX({
-    // Add markdown plugins here, as desired
-});
- 
-export default withMDX(nextConfig);
+export default nextConfig;
