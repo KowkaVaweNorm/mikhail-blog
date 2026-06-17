@@ -7,7 +7,6 @@ import { ReactNode } from 'react';
 import { ImageSlider } from './ImageSlider/ImageSlider';
 import { ProjectDetails } from './ProjectDetails';
 import { ProjectModal } from './ProjectModal/ProjectModal';
-import { useWidthScreen } from '@/shared/lib/hooks/useWidthScreen';
 
 export interface ProjectCardProps {
     title: string;

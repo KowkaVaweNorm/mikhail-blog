@@ -4,6 +4,7 @@ import './globals.css';
 import cls from './layout.module.scss';
 import { Header } from './components/Header/Header';
 import { HashScroll } from './components/HashScroll/HashScroll';
+import { Suspense } from 'react';
 const inter = Inter({
     subsets: ['latin', 'cyrillic'],
     variable: '--font-inter',
@@ -107,7 +108,9 @@ export default function RootLayout({
             <body>
                 <div className={cls.layout}>
                     <Header />
-                    <HashScroll />
+                    <Suspense>
+                        <HashScroll />
+                    </Suspense>
                     <div className={cls.blobBg}>
                         <div className={`${cls.blob} ${cls.blob1}`}></div>
                         <div className={`${cls.blob} ${cls.blob2}`}></div>
@@ -115,7 +118,7 @@ export default function RootLayout({
                     </div>
                     <main className={cls.page}>{children}</main>
                 </div>
-                <div id='modal-container'></div>
+                <div id="modal-container"></div>
             </body>
         </html>
     );

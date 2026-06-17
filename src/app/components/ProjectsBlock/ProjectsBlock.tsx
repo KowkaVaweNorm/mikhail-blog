@@ -1,11 +1,10 @@
 'use client';
 
-import { useRef, useState, useEffect, useCallback, Profiler } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 import cls from './ProjectsBlock.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRocket, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { ProjectCard } from './ProjectCard/ProjectCard';
-import { onRender } from '@/shared/lib/utils/profiler';
 import { PROJECTS_DATA } from './project-data';
 import { throttle } from '@/shared/lib/utils/throttle';
 
@@ -200,7 +199,6 @@ export const ProjectsBlock = () => {
     };
     return (
         <>
-            {/* <Profiler id="Projects" onRender={onRender}> */}
             <div className={cls.sectionHeader}>
                 <div className={cls.sectionTitle}>
                     <FontAwesomeIcon icon={faRocket} /> Проекты
@@ -247,7 +245,6 @@ export const ProjectsBlock = () => {
                     </div>
                 </div>
             )}
-            {/* </Profiler> */}
         </>
     );
 };

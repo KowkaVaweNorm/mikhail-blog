@@ -24,7 +24,6 @@ export const ProjectDetails = memo(
             setIsExpanded(isTabletOrMore);
         }, [isTabletOrMore]);
 
-        console.log({ isTabletOrMore, isExpanded });
         const onToggleExpand = () => {
             setIsExpanded(prev => !prev);
         };

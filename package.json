@@ -1,6 +1,6 @@
 {
-    "name": "nocturn-landing",
-    "description": "landing",
+    "name": "mikhail-n-landing",
+    "description": "Mikhail blog",
     "version": "0.0.1",
     "scripts": {
         "dev": "next dev",
@@ -42,14 +42,26 @@
         "typescript": "5.9.3"
     },
     "browserslist": [
-        "last 2 versions",
+        "last 3 versions",
         "not dead",
-        "not ie 11"
+        "not ie 11",
+        "not op_mini all",
+        "since 2020"
     ],
     "engines": {
         "node": ">=20.0.0",
         "npm": ">=10.0.0"
     },
-    "license": "UNLICENSED",
+    "packageManager": "npm@10.8.2",
+    "author": "Mikhail-N",
+    "keywords": [
+        "blog",
+        "portfolio",
+        "personal-brand",
+        "developer",
+        "nextjs",
+        "typescript"
+    ],
+    "license": "MIT",
     "private": true
 }

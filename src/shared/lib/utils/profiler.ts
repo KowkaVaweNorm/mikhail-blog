@@ -1,12 +1,6 @@
 import { ProfilerOnRenderCallback } from 'react';
 
 export const onRender: ProfilerOnRenderCallback = (id, phase, actualDuration, baseDuration, startTime, commitTime) => {
-    const phases = {
-        mount: { color: '\x1b[32m', icon: '🚀' },
-        update: { color: '\x1b[36m', icon: '🔄' },
-        'nested-update': { color: '\x1b[33m', icon: '📦' },
-    };
-
     const formatTime = (ms: number) => {
         if (ms < 1) return `${(ms * 1000).toFixed(0)}μs`;
         if (ms < 1000) return `${ms.toFixed(1)}ms`;
