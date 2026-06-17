@@ -115,6 +115,7 @@ export default function RootLayout({
                     </div>
                     <main className={cls.page}>{children}</main>
                 </div>
+                <div id='modal-container'></div>
             </body>
         </html>
     );

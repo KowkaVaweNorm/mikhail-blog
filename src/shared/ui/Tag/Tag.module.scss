@@ -1,0 +1,27 @@
+.tag {
+    background: #0f0f1c;
+    border-radius: 30px;
+    padding: 5px 14px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
+    color: #b9b9ff;
+    border: 0.5px solid #2a2a40;
+    transition: all 0.2s;
+
+    &:hover {
+        background: #1b1b2c;
+        border-color: #6c63ff;
+        color: white;
+    }
+    &.size_small {
+        color: inherit;
+        padding: 6px 18px;
+        font-size: 0.8rem;
+        letter-spacing: -0.2px;
+
+        &:hover {
+            background: #1e1e32;
+        }
+    }
+}

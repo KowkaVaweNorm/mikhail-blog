@@ -5,6 +5,7 @@ import { TechStackBlock } from './components/TechStackBlock/TechStackBlock';
 
 import cls from './page.module.scss';
 import { ProjectsBlock } from './components/ProjectsBlock/ProjectsBlock';
+import { Profiler } from 'react';
 
 export default function Home() {
     return (

@@ -1,0 +1,139 @@
+.sliderContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+
+    @media (max-width: 744px) {
+        // min-height: 260px;
+    }
+
+    .projectImage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        cursor: pointer;
+        display: block;
+        border-top-left-radius: calc(32px - 16px);
+        border-top-right-radius: calc(32px - 16px);
+        @media (max-width: 744px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+            width: 100%;
+            height: auto;
+            max-height: 260px;
+            object-fit: contain;
+            background: #0a0a12;
+        }
+    }
+
+    .sliderBtn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        border: none;
+        color: white;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+
+        &:hover {
+            background: #6c63ff;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        &.sliderBtnPrev {
+            left: 12px;
+        }
+
+        &.sliderBtnNext {
+            right: 12px;
+        }
+    }
+
+    .sliderDots {
+        position: absolute;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 2;
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            padding: 0;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.8);
+            }
+
+            &.dotActive {
+                background: #6c63ff;
+                width: 20px;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+.imgPlaceholder {
+    background: linear-gradient(135deg, #14141f, #0a0a12);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #8e8eb5;
+    font-size: 0.9rem;
+    font-weight: 500;
+    gap: 16px;
+    text-align: center;
+    padding: 24px;
+    min-height: 320px;
+
+    svg {
+        font-size: 3rem;
+        opacity: 0.6;
+        color: #6c63ff;
+    }
+
+    span {
+        max-width: 200px;
+    }
+    @media (max-width: 744px) {
+        min-height: 200px;
+        padding: 32px;
+        flex-direction: row;
+        gap: 12px;
+
+        svg {
+            font-size: 2rem;
+        }
+
+        span {
+            max-width: none;
+        }
+    }
+}

@@ -63,6 +63,9 @@ export const Header = () => {
                         <Link href="/" className={isActive('/') ? cls.active : ''} onClick={closeMenu}>
                             Портфолио
                         </Link>
+                        <Link href="/blog" className={isActive('/blog') ? cls.active : ''} onClick={closeMenu}>
+                            Блог
+                        </Link>
 
                         <Link
                             href="/#contacts_block"
