@@ -6,7 +6,6 @@ import { TechStackBlock } from './components/TechStackBlock/TechStackBlock';
 import cls from './page.module.scss';
 import { ProjectsBlock } from './components/ProjectsBlock/ProjectsBlock';
 
-
 export default function Home() {
     return (
         <div className={cls.container}>
@@ -29,9 +28,9 @@ export default function Home() {
                         <span className={cls.techChip}> Node.js</span>
                     </div>
                     <div className={cls.btnGroup}>
-                        <button className={cls.btnPrimary} id="projectsBtn">
-                            <FontAwesomeIcon icon={faArrowDown} /> заметки
-                        </button>
+                        <a href="#projects_section" className={cls.btnPrimary} id="projects_section">
+                            <FontAwesomeIcon icon={faArrowDown} /> Проекты
+                        </a>
                         <a href="#contacts_block" className={cls.btnOutline} id="connectBtn">
                             <FontAwesomeIcon icon={faPaperPlane} className={cls.letter_icon} /> Контакты
                         </a>
@@ -43,7 +42,7 @@ export default function Home() {
                 <LastArticles />
             </section> */}
 
-            <section className={cls.section}>
+            <section className={cls.section} id="projects_section">
                 <ProjectsBlock />
             </section>
 
@@ -56,7 +55,7 @@ export default function Home() {
             </section>
 
             <footer className={cls.footer}>
-                <p>© 2025 Михаил · N · блог о программировании</p>
+                <p>© 2026 Михаил · N · блог о программировании</p>
             </footer>
         </div>
     );
