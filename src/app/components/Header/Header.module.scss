@@ -24,7 +24,7 @@
 
         @media (max-width: 720px) {
             padding: 10px 0 10px;
-             padding: 10px 10px 10px 10px;
+            padding: 10px 10px 10px 10px;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
@@ -59,6 +59,7 @@
             transition: all 0.3s ease;
 
             @media (max-width: 720px) {
+                display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -73,8 +74,8 @@
                 z-index: 99;
                 transition: all 0.3s ease;
 
-                &.hidden {
-                    display: none;
+                &.show {
+                    display: flex;
                 }
             }
             a {

@@ -1,0 +1,58 @@
+.note_block {
+    --color-bg-note: rgba(108, 99, 255, 0.08);
+    --color-accent: #6c63ff;
+    --color-accent-light: #b3aeff;
+    --color-text-secondary: #d4d4f0;
+
+    --color-bg-warning: rgba(255, 180, 50, 0.08);
+    --color-warning: #f0b84d;
+    --color-warning-border: #f0a030;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 12px;
+    padding: 18px 24px;
+    margin: 28px 0;
+    color: var(--color-text-secondary);
+    width: 100%;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        padding: 14px 18px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 12px 14px;
+        gap: 10px;
+    }
+
+    .note_icon {
+        color: var(--color-accent);
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
+
+    .note_content {
+        strong {
+            color: var(--color-accent-light);
+        }
+    }
+    &.note {
+        background: var(--color-bg-note);
+        border-left: 3px solid var(--color-accent);
+        .note_icon {
+            color: var(--color-accent);
+        }
+    }
+    &.warn {
+        background: var(--color-bg-warning);
+        border-left: 3px solid var(--color-warning-border);
+        .note_icon {
+            color: var(--color-warning);
+        }
+        strong {
+            color: var(--color-warning);
+        }
+    }
+}

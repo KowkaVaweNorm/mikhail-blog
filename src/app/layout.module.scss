@@ -65,6 +65,13 @@
         z-index: 1;
         overflow-x: hidden;
     }
+    .footer {
+        text-align: center;
+        padding: 32px 0;
+        font-size: 0.8rem;
+        color: #5f5f8a;
+        border-top: 1px solid rgba(60, 60, 90, 0.3);
+    }
 }
 @keyframes floatBlob {
     0% {

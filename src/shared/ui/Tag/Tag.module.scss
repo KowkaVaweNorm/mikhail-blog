@@ -9,7 +9,7 @@
     border: 0.5px solid #2a2a40;
     transition: all 0.2s;
 
-    &:hover {
+    &:not(.nohover):hover {
         background: #1b1b2c;
         border-color: #6c63ff;
         color: white;

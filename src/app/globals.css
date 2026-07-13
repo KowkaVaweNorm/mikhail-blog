@@ -1,3 +1,17 @@
+:root {
+    --space-0_25: 4px;
+    --space-0_5: 8px;
+    --space-0_75: 12px;
+    --space-1: 16px;
+    --space-1_5: 24px;
+
+    --space-2: clamp(2rem, 1.8rem + 1vw, 2rem);
+    --space-3: clamp(3rem, 2.5rem + 2.5vw, 4rem);
+    --space-4: clamp(4rem, 3rem + 5vw, 6rem);
+    --space-6: clamp(6rem, 4rem + 8vw, 8rem);
+    --space-8: clamp(8rem, 5rem + 10vw, 12rem);
+}
+
 html {
     height: 100%;
 }

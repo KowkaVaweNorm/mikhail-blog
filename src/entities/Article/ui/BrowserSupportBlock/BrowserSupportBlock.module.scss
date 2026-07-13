@@ -1,0 +1,48 @@
+.browserCompat {
+    --color-bg-compat: rgba(12, 12, 22, 0.6);
+    --color-text-primary: #ececff;
+    width: 100%;
+    background: var(--color-bg-compat);
+    border: 1px solid #2c2c48;
+    border-radius: 24px;
+    padding: 28px 32px;
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @media (max-width: 744px) {
+            font-size: 1rem;
+        }
+        svg {
+            color: var(--color-accent);
+        }
+    }
+    .view_toggle {
+        border: none;
+        background-color: transparent;
+        color: var(--color-text-primary);
+        font-size: 1.1rem;
+        &:hover {
+            cursor: pointer;
+            .arrow_up {
+                transform: translateY(-20%);
+            }
+            .arrow_down {
+                transform: translateY(20%);
+            }
+        }
+        .arrow_up,
+        .arrow_down {
+            transition: 0.2s;
+        }
+    }
+    .iframe_collapsed {
+        display: none;
+    }
+    @media (max-width: 744px) {
+        padding: 20px 18px;
+    }
+}

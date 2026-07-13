@@ -43,11 +43,12 @@ export const Header = () => {
                 <div className={cls.navbar}>
                     <div className={cls.logo}>
                         <Link href="/" onClick={closeMenu}>
-                            Михаил · N
+                            Михаил
+                            {/* · N */}
                         </Link>
                     </div>
 
-                    {isMobile && (
+                    {/* {isMobile && (
                         <button
                             className={`${cls.burger} ${isMenuOpen ? cls.burgerOpen : ''}`}
                             onClick={toggleMenu}
@@ -57,23 +58,23 @@ export const Header = () => {
                             <span></span>
                             <span></span>
                         </button>
-                    )}
+                    )} */}
 
-                    <div className={`${cls.navLinks} ${isMobile && !isMenuOpen ? cls.hidden : ''}`}>
-                        <Link href="/" className={isActive('/') ? cls.active : ''} onClick={closeMenu}>
+                    <div className={`${cls.navLinks} ${isMobile && isMenuOpen ? cls.show : ''}`}>
+                        {/* <Link href="/" className={isActive('/') ? cls.active : ''} onClick={closeMenu}>
                             Портфолио
-                        </Link>
-                        <Link href="/blog" className={isActive('/blog') ? cls.active : ''} onClick={closeMenu}>
+                        </Link> */}
+                        {/* <Link href="/blog" className={isActive('/blog') ? cls.active : ''} onClick={closeMenu}>
                             Блог
-                        </Link>
+                        </Link> */}
 
-                        <Link
+                        {/* <Link
                             href="/#contacts_block"
                             className={isActive('/') && pathname.includes('contacts') ? cls.active : ''}
                             onClick={closeMenu}
                         >
                             Контакты
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>

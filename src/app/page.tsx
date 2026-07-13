@@ -16,9 +16,10 @@ export default function Home() {
                         <span className={cls.contact_link}>Открыт к сотрудничеству</span>
                     </a>
                     <h1>
-                        Михаил · N<br /> Блог о разработке
+                        Михаил
+                        {/* · N <br /> Блог о разработке */}
                     </h1>
-                    <p className={cls.heroDesc}>Работаем коллеги!</p>
+                    {/* <p className={cls.heroDesc}>Работаем коллеги!</p> */}
                     <div className={cls.techMicro}>
                         <span className={cls.techChip}> React</span>
                         <span className={cls.techChip}>Nest</span>
@@ -53,10 +54,6 @@ export default function Home() {
             <section className={cls.section} id="contacts_block">
                 <ContactBlock />
             </section>
-
-            <footer className={cls.footer}>
-                <p>© 2026 Михаил · N · блог о программировании</p>
-            </footer>
         </div>
     );
 }

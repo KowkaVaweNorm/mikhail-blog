@@ -117,6 +117,10 @@ export default function RootLayout({
                         <div className={`${cls.blob} ${cls.blob3}`}></div>
                     </div>
                     <main className={cls.page}>{children}</main>
+                    <footer className={cls.footer}>
+                        {/* <p>© 2026 Михаил · N · блог о программировании</p> */}
+                        <p>© 2026 Михаил </p>
+                    </footer>
                 </div>
                 <div id="modal-container"></div>
             </body>
