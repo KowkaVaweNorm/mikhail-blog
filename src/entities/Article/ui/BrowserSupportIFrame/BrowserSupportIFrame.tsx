@@ -12,7 +12,7 @@ export const BrowserSupportIFrame = (props: TProps) => {
     const { name, height = '400', width = '100%', className } = props;
     const [isLoading, setIsLoading] = useState(true);
     const preparedName = encodeURIComponent(name);
-
+    console.log(isLoading);
     return (
         <iframe
             src={`https://caniuse.com/?search=${preparedName}`}
