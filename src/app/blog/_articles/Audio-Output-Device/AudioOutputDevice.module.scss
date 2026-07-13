@@ -1,0 +1,296 @@
+.articleWrapper {
+    --fa-size: 1em;
+    --color-text-primary: #ececff;
+    --color-text-secondary: #d4d4f0;
+    --color-text-muted: #8f8fbb;
+    --color-text-light: #b9b9ee;
+    --color-text-white: #ffffff;
+    --color-bg-primary: #07070f;
+    --color-bg-secondary: #0b0b14;
+    --color-bg-code: #0b0b14;
+    --color-bg-note: rgba(108, 99, 255, 0.08);
+    --color-border: rgba(80, 80, 120, 0.3);
+    --color-border-light: #28283e;
+    --color-border-code: #28283e;
+    --color-accent: #6c63ff;
+    --color-accent-light: #b3aeff;
+    --color-accent-muted: #bcb9ff;
+    --color-code-lang-bg: #14141f;
+    --color-code-lang-border: #2a2a44;
+    --color-code-lang-text: #6f6f96;
+    --color-tag-bg: rgba(108, 99, 255, 0.18);
+    --color-tag-border: rgba(108, 99, 255, 0.4);
+    --color-footer-border: rgba(80, 80, 120, 0.3);
+
+    svg[data-icon] {
+        width: 1em !important;
+        height: 1em !important;
+        flex-shrink: 0;
+    }
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 0 60px;
+    color: var(--color-text-primary);
+
+    @media (max-width: 768px) {
+        padding: 20px 0 40px;
+    }
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition:
+        gap 0.2s,
+        color 0.2s;
+
+    &:hover {
+        color: var(--color-accent);
+        gap: 14px;
+    }
+}
+
+.articleHeader {
+    margin-bottom: 48px;
+
+    .tag {
+        display: inline-block;
+        background: var(--color-tag-bg);
+        border-radius: 40px;
+        padding: 4px 14px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        font-family: 'JetBrains Mono', monospace;
+        color: var(--color-accent-muted);
+        border: 0.5px solid var(--color-tag-border);
+        margin-bottom: 16px;
+    }
+
+    h1 {
+        font-size: clamp(2.2rem, 5vw, 3.4rem);
+        font-weight: 800;
+        line-height: 1.2;
+        background: linear-gradient(135deg, #ffffff, #b3b0ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 12px;
+
+        @media (max-width: 480px) {
+            font-size: 1.8rem;
+        }
+    }
+
+   
+}
+
+.articleImageMock {
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(135deg, #151525, #0a0a12);
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    border: 1px solid #26263a;
+    margin: 28px 0 36px;
+
+    svg {
+        font-size: 3.2rem;
+        opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+        height: 200px;
+        font-size: 0.85rem;
+
+        svg {
+            font-size: 2.2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        height: 160px;
+    }
+}
+
+.articleBody {
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 48px 0 16px;
+        letter-spacing: -0.3px;
+        color: var(--color-text-primary);
+
+        @media (max-width: 480px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+
+        color: var(--color-text-primary);
+
+        @media (max-width: 480px) {
+            font-size: 1.15rem;
+        }
+    }
+
+    p {
+        margin-bottom: 20px;
+        color: var(--color-text-secondary);
+        font-size: 1.05rem;
+
+        @media (max-width: 480px) {
+            font-size: 0.95rem;
+        }
+    }
+
+    strong {
+        color: var(--color-text-white);
+        font-weight: 600;
+    }
+
+    ul,
+    ol {
+        margin: 16px 0 24px 24px;
+        color: var(--color-text-secondary);
+
+        li {
+            margin-bottom: 8px;
+        }
+    }
+
+    code {
+        font-family: 'JetBrains Mono', monospace;
+        background: rgba(108, 99, 255, 0.1);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.9em;
+    }
+}
+
+.noteBox {
+    background: var(--color-bg-note);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 12px;
+    padding: 18px 24px;
+    margin: 28px 0;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    svg {
+        color: var(--color-accent);
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
+
+    strong {
+        color: var(--color-accent-light);
+    }
+}
+
+.browserGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        gap: 18px;
+    }
+}
+
+.browserItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-text-light);
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    .browserIcon {
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(108, 99, 255, 0.1);
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--color-accent-light);
+        transition:
+            transform 0.2s,
+            background 0.2s;
+    }
+
+    &:hover .browserIcon {
+        transform: translateY(-3px);
+        background: rgba(108, 99, 255, 0.2);
+    }
+
+    .browserVersion {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        background: #141421;
+        padding: 0 10px;
+        border-radius: 20px;
+        border: 0.5px solid #2e2e4a;
+    }
+
+    @media (max-width: 768px) {
+        .browserIcon {
+            width: 2rem;
+            height: 2rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+.articleFooter {
+    margin-top: 60px;
+    border-top: 1px solid var(--color-footer-border);
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: var(--color-text-muted);
+
+    .tagsList {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+
+        .tag {
+            background: rgba(108, 99, 255, 0.12);
+            border-radius: 40px;
+            padding: 4px 14px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--color-accent-muted);
+            border: 0.5px solid rgba(108, 99, 255, 0.3);
+        }
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+}
