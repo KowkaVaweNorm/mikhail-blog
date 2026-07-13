@@ -10,7 +10,7 @@ export const ContactBlock = () => {
         <div className={cls.contactStrip} id="contacts_block">
             <div className={cls.header}>
                 <FontAwesomeIcon icon={faHandshake} className={cls.headerIcon} />
-                <h3 className={cls.contactTitle}>Давайте обсудим сотрудничество и партнерство</h3>
+                <h3 className={cls.contactTitle}>Контакты</h3>
                 <p className={cls.contactDesc}></p>
             </div>
 
