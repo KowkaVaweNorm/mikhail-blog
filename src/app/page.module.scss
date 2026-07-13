@@ -101,15 +101,24 @@
             flex-wrap: wrap;
 
             .btnOutline {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
                 background: transparent;
                 border: 1px solid #45456e;
                 padding: 12px 28px;
                 border-radius: 50px;
                 font-weight: 500;
+                font-size: 0.95rem;
                 color: #ddddff;
                 cursor: pointer;
                 transition: 0.2s;
                 text-decoration: none;
+                max-height: 50px;
+                & > * {
+                    font-size: 0.95rem;
+                }
                 &:hover {
                     border-color: #6c63ff;
                     background: rgba(108, 99, 255, 0.08);
@@ -117,7 +126,7 @@
                 }
 
                 .letter_icon {
-                    transform: translate(-5px, 1) scale(1.1);
+                    transform: translate(-5px, 1);
                 }
             }
         }
@@ -133,21 +142,24 @@
     }
 }
 
-
 .btnPrimary {
-    text-decoration: none;
-    background: linear-gradient(105deg, #6c63ff, #4a42d4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     border: none;
     padding: 12px 32px;
+    max-height: 50px;
     border-radius: 50px;
-    font-weight: 600;
     color: white;
     cursor: pointer;
     transition: 0.25s;
     font-family: inherit;
     font-size: 0.95rem;
+    font-weight: 600;
     box-shadow: 0 6px 18px rgba(108, 99, 255, 0.3);
-
+    background: linear-gradient(105deg, #6c63ff, #4a42d4);
+    text-decoration: none;
     &:hover {
         transform: scale(1.02);
         background: linear-gradient(105deg, #7f77ff, #5e56ea);

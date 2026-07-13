@@ -30,10 +30,12 @@ export default function Home() {
                     </div>
                     <div className={cls.btnGroup}>
                         <a href="#projects_section" className={cls.btnPrimary} id="projects_section">
-                            <FontAwesomeIcon icon={faArrowDown} /> Проекты
+                            <FontAwesomeIcon icon={faArrowDown} /> 
+                            Проекты
                         </a>
                         <a href="#contacts_block" className={cls.btnOutline} id="connectBtn">
-                            <FontAwesomeIcon icon={faPaperPlane} className={cls.letter_icon} /> Контакты
+                            <FontAwesomeIcon icon={faPaperPlane} className={cls.letter_icon} /> 
+                            Контакты
                         </a>
                     </div>
                 </div>
