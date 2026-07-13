@@ -1,8 +1,8 @@
-import config from '~/next.config';
+// import config from '~/next.config';
 import AudioOutputDevice from './AudioOutputDevice';
 import { TArticle } from '@/entities/Article';
 
-const basePath = config.basePath;
+// const basePath = config.basePath;
 
 export const audioOutputDeviceMeta: TArticle = {
     id: 'localstorage-api-guide',

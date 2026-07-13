@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import cls from './Header.module.scss';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 export const Header = () => {
-    const pathname = usePathname();
+    // const pathname = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
@@ -22,20 +22,20 @@ export const Header = () => {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+    // const toggleMenu = () => {
+    //     setIsMenuOpen(!isMenuOpen);
+    // };
 
     const closeMenu = () => {
         setIsMenuOpen(false);
     };
 
-    const isActive = (path: string) => {
-        if (path === '/') {
-            return pathname === path;
-        }
-        return pathname.startsWith(path);
-    };
+    // const isActive = (path: string) => {
+    //     if (path === '/') {
+    //         return pathname === path;
+    //     }
+    //     return pathname.startsWith(path);
+    // };
 
     return (
         <header className={cls.header}>
